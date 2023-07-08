@@ -76,7 +76,7 @@ export default function Register({handleDataFromChild}){
     return (
       <div className="RegisterContainer">
 <div className="container">
-	<div className="screen">
+	<div className="screen" style={{marginTop:"350px"}}>
 		<div className="screen__content">
 			<form className="register" onSubmit={handleSubmit}>
 				<div className="register__field">

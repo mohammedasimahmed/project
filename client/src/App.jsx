@@ -15,6 +15,7 @@ import Kids from "./Kids"
 import Womens from "./Womens"
 import AllShoes from "./AllShoes"
 import { NikeProducts } from "./products"
+import { Products2 } from "./Products2"
 
 export default function App(){
     const [translate,setTranslate] = useState(0)
@@ -126,6 +127,20 @@ export default function App(){
             )
         })
     }
+    {
+        Products2.map((item)=>{
+            return(
+                <Route path={item.title} element={<ShoeCard   
+                item={item}
+                title={item.title}
+                price={item.price}
+                username={dataFromChild}
+                token={token}
+                />} />
+            )
+        })
+    }
+
     <Route path="/register" element={<Register />}/>
     <Route path="/login" element={<Login handleDataFromChild={handleDataFromChild} handleTokenFromChild={handleTokenFromChild} />}/>
     <Route path="/newfeatured" element={<NewFeatured />}/>
@@ -134,7 +149,7 @@ export default function App(){
     <Route path="/kids" element={<Kids />}/>
     <Route path="/allShoes" element={<AllShoes />}/>
     { dataFromChild==="admin" && <Route path="/users" element={<Users />}/>}
-    <Route path="/users" element={<Users />}/>
+    <Route path="/users" element={<Users token={token} />}/>
     { dataFromChild!=='' &&   <Route path="/cart" element={<Cart username={dataFromChild} token={token} />}/>}
     {/* <Route path="/cart" element={<Cart username={dataFromChild} />}/> */}
     {true && <Route path="/demo/trial" element={<h1>hello</h1>}/>}

@@ -1,5 +1,5 @@
 // import { useState ,useEffect } from "react"
-import { MensProducts } from "./MensProducts"
+import { Products2 } from "./Products2"
 // import { Link } from "react-router-dom"
 // export default function Mens() {
 //     const [menProductsArr,setMenProductsArr] = useState([])
@@ -134,7 +134,29 @@ export default function men() {
     <button class="nxt-btn"><img src="https://cdn-icons-png.flaticon.com/128/2989/2989988.png" alt="" /></button>
         <h1 style={{margin:"50px 200px"}}>Shoes</h1> 
     <div class="product-container">
-        <div class="product-card">
+
+        {
+            Products2.map((item)=>{
+                let ur = "/"+item.title
+                return(
+                    <Link to={ur}>
+                    <div class="product-card">
+                    <div class="product-image">
+               
+                        <img src={item.colors[0].img} class="product-thumb" alt="" />
+                        <button class="card-btn">add to cart</button>
+                    </div>
+                    <div class="product-info">
+                        <h2 class="product-Nike">{item.title}</h2>
+                        <p class="product-short-description">about shoes..</p>
+                        <span class="price">${item.price}</span>
+                    </div>
+                </div>
+                </Link>
+                )
+            })
+        }
+        {/* <div class="product-card">
             <div class="product-image">
        
                 <img src="https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTV8fHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=1000&q=60" class="product-thumb" alt="" />
@@ -153,7 +175,7 @@ export default function men() {
                 <button class="card-btn">add to wishlist</button>
             </div>
             <div class="product-info">
-                <h2 class="product-Nike">Nike</h2>
+                <h2 class="product-Nike">Nike1</h2>
                 <p class="product-short-description">about shoes..</p>
                 <span class="price">$100</span>
             </div>
@@ -165,7 +187,7 @@ export default function men() {
                 <button class="card-btn">add to wishlist</button>
             </div>
             <div class="product-info">
-                <h2 class="product-Nike">Nike</h2>
+                <h2 class="product-Nike">Nike2</h2>
                 <p class="product-short-description">about shoes..</p>
                 <span class="price">$130</span>
             </div>
@@ -177,7 +199,7 @@ export default function men() {
                 <button class="card-btn">add to wishlist</button>
             </div>
             <div class="product-info">
-                <h2 class="product-Nike">Nike</h2>
+                <h2 class="product-Nike">Nike3</h2>
                 <p class="product-short-description">about shoes..</p>
                 <span class="price">$133</span>
             </div>
@@ -189,7 +211,7 @@ export default function men() {
                 <button class="card-btn">add to wishlist</button>
             </div>
             <div class="product-info">
-                <h2 class="product-Nike">Nike</h2>
+                <h2 class="product-Nike">Nike4</h2>
                 <p class="product-short-description">about shoes..</p>
                 <span class="price">$20</span>
             </div>
@@ -201,7 +223,7 @@ export default function men() {
                 <button class="card-btn">add to wishlist</button>
             </div>
             <div class="product-info">
-                <h2 class="product-Nike">Nike</h2>
+                <h2 class="product-Nike">Nike5</h2>
                 <p class="product-short-description">about shoes..</p>
                 <span class="price">$20</span>
             </div>
@@ -213,7 +235,7 @@ export default function men() {
                 <button class="card-btn">add to wishlist</button>
             </div>
             <div class="product-info">
-                <h2 class="product-Nike">Nike</h2>
+                <h2 class="product-Nike">Nike6</h2>
                 <p class="product-short-description">about shoes..</p>
                 <span class="price">$20</span>
             </div>
@@ -225,7 +247,7 @@ export default function men() {
                 <button class="card-btn">add to wishlist</button>
             </div>
             <div class="product-info">
-                <h2 class="product-Nike">Nike</h2>
+                <h2 class="product-Nike">Nike7</h2>
                 <p class="product-short-description">about shoes..</p>
                 <span class="price">$20</span>
             </div>
@@ -237,7 +259,7 @@ export default function men() {
                 <button class="card-btn">add to wishlist</button>
             </div>
             <div class="product-info">
-                <h2 class="product-Nike">Nike</h2>
+                <h2 class="product-Nike">Nike8</h2>
                 <p class="product-short-description">about shoes..</p>
                 <span class="price">$20</span>
             </div>
@@ -249,11 +271,11 @@ export default function men() {
                 <button class="card-btn">add to wishlist</button>
             </div>
             <div class="product-info">
-                <h2 class="product-Nike">Nike</h2>
+                <h2 class="product-Nike">Nike9</h2>
                 <p class="product-short-description">about shoes..</p>
                 <span class="price">$20</span>
             </div>
-        </div>
+        </div> */}
     </div>
     <h1 style={{margin:"50px 200px"}}>Clothing</h1>
     <div className="product-container">

@@ -261,14 +261,14 @@ tbody {
 
 .color-choose input[type="radio"] + label span {
   border: 2px solid #FFFFFF;
-  box-shadow: 0 1px 3px 0 rgba(0,0,0,0.33);
+  /* box-shadow: 0 1px 3px 0 rgba(0,0,0,0.33); */
 }
 
 /* .color-choose input[type="radio"]#red + label span {
   background-color: #C91524;
 } */
 .color-choose input[type="radio"]#blue + label span {
-  background-color: #314780;
+  /* background-color: #314780; */
 }
 
 .color-choose input[type="radio"]:checked + label span {
@@ -302,44 +302,4 @@ tbody {
 }
 .cart-btn:hover {
   background-color: #64af3d;
-}
-
-.galleryItem {
-  opacity: 0;
-  transform: translateY(50px);
-  transition: opacity 0.5s ease-in, transform 0.5s ease-in; /* Add this line */
-}
-
-.fade-in-translate {
-  opacity: 1;
-  transform: translateY(0);
-  transition: opacity 0.5s ease-in, transform 0.5s ease-in;
-}
-
-
-/* Responsive */
-@media (max-width: 940px) {
-  .container {
-    flex-direction: column;
-    margin-top: 60px;
-  }
-
-  .left-column,
-  .right-column {
-    width: 100%;
-  }
-
-  .left-column img {
-    width: 300px;
-    right: 0;
-    top: -65px;
-    left: initial;
-  }
-}
-
-@media (max-width: 535px) {
-  .left-column img {
-    width: 220px;
-    top: -85px;
-  }
 }

@@ -132,9 +132,9 @@ export default function MainBody({ find , setFind , translate , productsArr , st
                     {    
                     productsArr.map((item)=>{
                         return (
-                            <div className="suggItem">
+                            <div className="suggItem" style={{padding:"7px"}}>
                                <Link to={item.title}>
-                               <h3 className="suggItem" >{item.title}</h3>
+                               <h3 className="suggItem" style={{color:"black"}} >{item.title}</h3>
                                </Link> 
                             </div>
                         )
